@@ -1,0 +1,175 @@
+/* Styling for the overall page */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+/* Login container with a background gradient */
+.login-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+}
+
+/* Adding a subtle overlay to the background */
+.overlay {
+  text-align: center;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  background-color: #0aa932ec;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styling */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links button {
+  margin: 0 15px;
+  background-color: #34ace0;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-links button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.dev-list {
+  list-style-type: none;
+  padding: 0;
+  color: #333;
+}
+
+.dev-list li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Styling for the header similar to TasksPage */
+.login-header {
+  display: flex;
+  justify-content: center; /* Centering the header */
+  align-items: center;
+  padding: 10px;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  /*background-color: rgba(0, 0, 0, 0.7);  Darker header background */
+  color: white;
+}
+
+.login-header img.logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.login-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+/* Other styles remain the same */
+
+
