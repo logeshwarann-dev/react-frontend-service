@@ -71,7 +71,7 @@ function LoginPage() {
             <span className="close" onClick={handleModalToggle}>&times;</span>
             <h2>Developer Team</h2>
             <ul className="dev-list">
-              <li>Abhishek Prasad [2023MT03130]</li>
+              <li>Abhishek Prasad [2023MT03142]</li>
               <li>Achala Rao [2023MT03162]</li>
               <li>B Pavan Kalyan [2023MT03175]</li>
               <li>Logeshwaran N [2023MT03135]</li>

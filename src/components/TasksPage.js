@@ -44,6 +44,8 @@ function TasksPage() {
       const createdTask = await response.json();
       setTasks([...tasks, createdTask]); // Directly append the new task to the list
       setNewTask({ title: '', description: '' }); // Clear the form fields
+      alert("A new task has been created");
+      window.location.reload(); // Refresh the page
     } else {
       alert('Failed to create task');
     }
