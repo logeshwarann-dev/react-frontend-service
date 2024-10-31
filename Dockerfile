@@ -1,5 +1,5 @@
-# Use the Node.js image
-FROM node:lts-alpine
+# Stage 1: Build the React app
+FROM node:lts-alpine AS build
 
 # Set the working directory
 WORKDIR /app
@@ -16,11 +16,17 @@ COPY . .
 # Build the React app for production
 RUN npm run build
 
-# Install a simple HTTP server to serve the static files
-RUN npm install -g serve
+# Stage 2: Serve the app using a lightweight web server
+FROM nginx:alpine
 
-# Expose port 3000
-EXPOSE 3000
+# Copy the build artifacts from the previous stage
+COPY --from=build /app/build /usr/share/nginx/html
 
-# Start the server to serve the built files
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Copy the custom NGINX configuration file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Start NGINX
+CMD ["nginx", "-g", "daemon off;"]
