@@ -13,6 +13,7 @@ export async function login(username, password) {
 }
 
 export async function signUp(email, password) {
+  console.log(`Auth service URL: ${AUTH_API_BASE_URL}`)
   const response = await fetch(`${AUTH_API_BASE_URL}/auth/signup`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
